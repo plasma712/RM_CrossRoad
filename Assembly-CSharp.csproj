@@ -67,6 +67,7 @@
     <Compile Include="Assets\04.Script\00.Core\SceneChange.cs" />
     <Compile Include="Assets\04.Script\00.Core\Singleton.cs" />
     <Compile Include="Assets\04.Script\01.Mouse\MouseRay.cs" />
+    <Compile Include="Assets\04.Script\02.Tile\TileInfo.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Plasma/Desktop/RM_CrossRoad/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
