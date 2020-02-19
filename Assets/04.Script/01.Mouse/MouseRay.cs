@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum State
 {
-    NONE, CREATE
+    NONE, CREATE, END
 }
 
 
@@ -21,14 +21,15 @@ public class MouseRay : Singleton<MouseRay>
 
     Vector3 CurMousePostion;      // 현재 마우스위치와 비교하기 위해 만든 임시벡터
 
-    int iState = (int)State.NONE; // enum state를 통해 값 변경할 예정. 초기값은 NONE인 0을 준다.
+    int iState = (int)State.CREATE; // enum state를 통해 값 변경할 예정. 초기값은 NONE인 0을 준다.
+
+    //int MaxDir = 20; // RayCast 거리값 조절 계속할 예정
 
     private void Start()
     {
         //// start에서 현재 마우스 위치를 넣어준다.
         Vector3 CurMousePostion = Input.mousePosition;
     }
-
 
     public void StateChange(int _iStateNumber)
     {
@@ -129,8 +130,6 @@ public class MouseRay : Singleton<MouseRay>
         ObjectCreate(); // 마우스 클릭시, 타일에 건물 설치 유무
     }
     #endregion
-
-
 
 }
 
